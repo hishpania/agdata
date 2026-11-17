@@ -1,0 +1,7 @@
+aiohttp>=3.9
+imagecodecs>=2024.1.1  # Compressed GeoTIFFs (LZW...).
+numpy>=1.26
+pandas>=2.1
+pyproj>=3.6
+scipy>=1.11  # netCDF-3 (NMME).
+tifffile>=2024.1.30

@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agdata"
+version = "0.1.0"
+description = "Asynchronous Python library for accessing certain NASA datasets, related to agriculture."
+readme = "README.md"
+# The code uses `X | Y` unions in runtime-evaluated annotations (no
+# `from __future__ import annotations`), which needs Python 3.10.
+requires-python = ">=3.10"
+license = "GPL-3.0-only"
+license-files = ["LICENSE"]
+keywords = ["agriculture", "nasa", "earthdata", "usda", "geospatial", "asyncio"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "aiohttp>=3.9",
+    "imagecodecs>=2024.1.1",  # Compressed GeoTIFFs (LZW...).
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "pyproj>=3.6",
+    "scipy>=1.11",  # netCDF-3 (NMME).
+    "tifffile>=2024.1.30",
+]
+
+[project.urls]
+Homepage = "https://github.com/hishpania/agdata"
+Repository = "https://github.com/hishpania/agdata"
+Issues = "https://github.com/hishpania/agdata/issues"
+
+[tool.setuptools]
+packages = ["agdata"]
